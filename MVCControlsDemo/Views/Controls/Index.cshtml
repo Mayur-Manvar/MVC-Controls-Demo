@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Controls Examples</h2>
+@Html.Label("User Name: ", "User Name: ")
+@Html.TextBox("Textbox", "This is textbox", new { style = "background-color:red", Title = "This is textbox demo" })
+<br />
+@Html.Label("Password: ", "Password: ")
+@Html.Password("Password", "This is password.")
+
+<br />
+@Html.Label("Address: ", "Address: ")
+@Html.TextArea("Address", "Global Address", 5, 20, null)
+
+@Html.Hidden("Id", 10)
+
+<br />
+@Html.Label("User Type: ")
+@Html.DropDownList("User Type", new List<SelectListItem>()
+{ new SelectListItem { Text = "Super Admin", Value = "Super Admin" },
+new SelectListItem { Text = "Admin", Value = "Admin", Selected = true },
+new SelectListItem { Text = "Client Admin", Value = "Client Admin" },
+new SelectListItem { Text = "Standard", Value = "Standard" }
+}, "Please select user type")
+
+<br />
+@Html.Label("Gender: ")
+@Html.RadioButton("radioGender", "1", true)@Html.Label("Male")
+@Html.RadioButton("radioGender", "2", false)@Html.Label("Female")
+
+<br />
+@Html.Label("Select Hobby: ")
+@Html.ListBox("Hobby", new List<SelectListItem>()
+{ new SelectListItem { Text = "Super Admin", Value = "Super Admin" },
+new SelectListItem { Text = "Admin", Value = "Admin", Selected = true },
+new SelectListItem { Text = "Client Admin", Value = "Client Admin" },
+new SelectListItem { Text = "Standard", Value = "Standard" }
+}, new { size = 6 })
+
+<br />
+@Html.Label("Select Study: ")
+@Html.Label("10th")
+@Html.CheckBox("10th", true)
+@Html.Label("10th")
+<br />
+@Html.CheckBox("12th", true)
+@Html.Label("12th")
+<br />
+@Html.CheckBox("Graduate", true)
+@Html.Label("Graduate")
+<br />
+@Html.CheckBox("Post Graguate", true)
+@Html.Label("Post Graguate")
